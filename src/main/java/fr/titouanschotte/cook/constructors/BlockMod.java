@@ -65,7 +65,7 @@ public class BlockMod extends Block {
                 worldIn.getGameRules().setOrCreateGameRule("sendCommandFeedback", "false");
                 worth=true;
             }
-            worldIn.getMinecraftServer().getCommandManager().executeCommand(worldIn.getMinecraftServer(), "summon minecraft:armor_stand "+pos.getX()+" " +pos.getY()+" "+pos.getZ()+" {CustomName:\"CUISINE\",Invulnerable:1b,NoGravity:1b,Invisible:1b,CustomNameVisible:1b}");
+            worldIn.getMinecraftServer().getCommandManager().executeCommand(worldIn.getMinecraftServer(), "summon minecraft:armor_stand "+pos.getX()+" " +pos.getY()+" "+pos.getZ()+" {CustomName:\">> §6CUISINER§r <<\",Invulnerable:1b,NoGravity:1b,Invisible:1b,CustomNameVisible:1b}");
             if(!worldIn.getGameRules().getBoolean("sendCommandFeedback") && worth){
                 worldIn.getGameRules().setOrCreateGameRule("sendCommandFeedback", "true");
                 worth=false;
