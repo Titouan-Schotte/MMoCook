@@ -35,11 +35,11 @@ Conversely, if you manage to stop the cursor while it is in the orange / red zon
 
 ![image](https://user-images.githubusercontent.com/73279480/147996113-839847c9-7bab-4841-9010-b1619c933bb9.png)
 
-## A qui est déstiné ce mod ?
+## Who is this mod intended for ?
 
 The current version is intended for infrastructures including a server under Forge / Mohist, the solo mod is unavailable.
 
-## A l'avenir ...
+## In the FUTURE ...
 
 - configurable items + addable from a config file
 - fully adapted version in English
