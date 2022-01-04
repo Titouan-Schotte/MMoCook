@@ -33,7 +33,7 @@ Si vous cliquez sur STOP lorsque le curseur est dans la zone grisé, vous obtien
 
 A l'inverse si vous réussissez à arréter le curseur alors qu'il est dans la zone orangé/rouge, vous obtiendrez une nourriture "premium" comportant des effets secondaires (ou non).
 
-![image](https://user-images.githubusercontent.com/73279480/147996099-0609c465-f395-4eda-acbc-ea7a76cd4dfa.png)
+![image](https://user-images.githubusercontent.com/73279480/147996113-839847c9-7bab-4841-9010-b1619c933bb9.png)
 
 ## A qui est déstiné ce mod ?
 
