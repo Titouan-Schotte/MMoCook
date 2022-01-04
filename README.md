@@ -43,4 +43,3 @@ La version actuelle est destinée pour les infrastructures comportants un serveu
 
 - items configurables + ajoutables à partir d'un fichier de config
 - version entièrement adaptée en anglais
--
