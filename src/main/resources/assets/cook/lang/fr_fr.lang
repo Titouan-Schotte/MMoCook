@@ -1,0 +1,33 @@
+itemGroup.mmocook=MMo Cook
+
+tile.campfire.name=Feu de Camps (cuisine)
+
+item.truite_bad.name=Poisson trop Cuit (mauvais)
+item.truite_good.name=Poisson Cuit (premium)
+
+item.steak_bad.name=Steak trop Cuit (mauvais)
+item.steak_good.name=Steak Saignant (premium)
+
+item.omelet_bad.name=Omelette (mauvaise)
+item.omelet_good.name=Omelette Baveuse (premium)
+
+item.greensoupe_bad.name=Soupe de Légumes (mauvaise)
+item.greensoupe_good.name=Soupe de Légumes (premium)
+
+item.confiture_bad.name=Confiture de Pomme (mauvaise)
+item.confiture_good.name=Confiture de Pomme (premium)
+
+item.brochette_viande_bad.name=Brochette du Combattant (mauvaise)
+item.brochette_viande_good.name=Brochette du Combattant (premium)
+
+item.brochette_champi_bad.name=Brochette aux Champignons (mauvaise)
+item.brochette_champi_good.name=Brochette aux Champignons (premium)
+
+item.fishsoupe_bad.name=Soupe de poisson (mauvaise)
+item.fishsoupe_good.name=Soupe de poisson (premium)
+
+item.cake_bad.name=Gâteau Succulent (mauvais)
+item.cake_good.name=Gâteau Succulent (premium)
+
+item.cookie_bad.name=Cookies Royaux (mauvaise)
+item.cookie_good.name=Cookies Royaux (premium)

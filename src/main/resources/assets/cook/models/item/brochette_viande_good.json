@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "cook:items/brochette_viande/brochette_viande_good"
+  }
+}

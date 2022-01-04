@@ -1,0 +1,31 @@
+itemGroup.mmocook=MMo Cook
+tile.campfire.name=Camp Fire (cook)
+item.truite_bad.name=Fish (bad)
+item.truite_good.name=Fish (premium)
+
+item.steak_bad.name=Beef (bad)
+item.steak_good.name=Beef Saignant (premium)
+
+item.omelet_bad.name=Omelet (bad)
+item.omelet_good.name=Omelet Baveuse (premium)
+
+item.greensoupe_bad.name=Vegetable Soup (bad)
+item.greensoupe_good.name=Vegetable Soup (premium)
+
+item.confiture_bad.name=Apple Jam (bad)
+item.confiture_good.name=Apple Jam (premium)
+
+item.brochette_viande_bad.name=Skewer of the Combatant (bad)
+item.brochette_viande_good.name=Skewer of the Combatant (premium)
+
+item.brochette_champi_bad.name=Mushroom Skewer (bad)
+item.brochette_champi_good.name=Mushroom Skewer (premium)
+
+item.fishsoupe_bad.name=Fish Soup (bad)
+item.fishsoupe_good.name=Fish Soup (premium)
+
+item.cake_bad.name=Cake (bad)
+item.cake_good.name=Cake (premium)
+
+item.cookie_bad.name=Cookies (bad)
+item.cookie_good.name=Cookies (premium)
