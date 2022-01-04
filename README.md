@@ -7,7 +7,7 @@ Mod francophone incluant un systéme de mini jeu pour obtenir des nourritures de
 
 Il vous suffit de placer le feu de camps inclut dans les blocks du mod pour avoir accès (par un clique droit sur ce dernier) à une interface graphique.
 
-![image](https://user-images.githubusercontent.com/73279480/147995440-1ab02e3b-bd62-44cf-bd9d-f27e5744bb28.png)
+![image](https://user-images.githubusercontent.com/73279480/148133988-b050dbe8-6285-475b-b373-b4f374a24418.png)
 
 Cela vous affichera donc :
 
