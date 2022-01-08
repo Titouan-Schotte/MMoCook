@@ -15,7 +15,7 @@ Cela vous affichera donc :
 
 Vous pouvez remarquer qu'en mettant votre souris par dessus la nourriture voulue, une petite fenêtre vous affichera les ingrédients nécessaires à sa conception + les effets secondaires que vous procurera cette nourriture.
 
-![image](https://user-images.githubusercontent.com/73279480/147995596-cff391d4-a531-4d2b-aa93-77bf5e33593b.png)
+![image](https://user-images.githubusercontent.com/73279480/148655838-933b6de6-ed0f-4293-b84b-a2037e891fea.png)
 
 Une fois tous les ingrédients récupérés vous pourrez alors séléctionner la nourriture souhaitée pour la cuisiner :
 
