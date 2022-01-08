@@ -39,7 +39,7 @@ A l'inverse si vous réussissez à arréter le curseur alors qu'il est dans la z
 
 La version actuelle est destinée pour les infrastructures comportants un serveur sous Forge/Mohist, le mod solo est indisponible.
 
-## List Jeux :
+## List Updates :
 
 - Update Quantitées modifiables (ingrédients nécessaires proportionnels)
 
