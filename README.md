@@ -11,7 +11,7 @@ Il vous suffit de placer le feu de camps inclut dans les blocks du mod pour avoi
 
 Cela vous affichera donc :
 
-![image](https://user-images.githubusercontent.com/73279480/147995510-6314e3e3-fdd1-4529-ae76-6918ce47cd36.png)
+![image](https://user-images.githubusercontent.com/73279480/148655813-a4f8f95e-76fd-4a85-b3b5-01edb4109ae5.png)
 
 Vous pouvez remarquer qu'en mettant votre souris par dessus la nourriture voulue, une petite fenêtre vous affichera les ingrédients nécessaires à sa conception + les effets secondaires que vous procurera cette nourriture.
 
