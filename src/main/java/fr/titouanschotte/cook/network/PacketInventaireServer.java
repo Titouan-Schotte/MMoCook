@@ -51,9 +51,6 @@ public class PacketInventaireServer implements IMessage {
 
 
             }
-            System.out.println(viandeCount);
-
-
             return new PacketInventaireClient(fishCount,viandeCount,shroomCount,carrotCount,patateCount,sugarCount,appleCount,cacaoCount,wheatCount,eggCount);
         }
     }

@@ -59,7 +59,6 @@ public class BlockMod extends Block {
     {
         if(!worldIn.isRemote){
             //Main.network.sendToServer(new PacketLabelServer(pos.getX(),pos.getY(),pos.getZ()));
-            System.out.println(worldIn.getGameRules().getBoolean("sendCommandFeedback"));
             boolean worth=false;
             if(worldIn.getGameRules().getBoolean("sendCommandFeedback")){
                 worldIn.getGameRules().setOrCreateGameRule("sendCommandFeedback", "false");
@@ -70,10 +69,9 @@ public class BlockMod extends Block {
                 worldIn.getGameRules().setOrCreateGameRule("sendCommandFeedback", "true");
                 worth=false;
             }
-            System.out.println(worldIn.getGameRules().getBoolean("sendCommandFeedback"));
         }
-
     }
+
     @Override
     public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state)
     {
@@ -96,8 +94,7 @@ public class BlockMod extends Block {
     @SideOnly(Side.CLIENT)
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
-        System.out.println("CLICKED");Minecraft.getMinecraft().displayGuiScreen(new GuiMainMenu(Minecraft.getMinecraft()));
+        Minecraft.getMinecraft().displayGuiScreen(new GuiMainMenu(Minecraft.getMinecraft()));
         return true;
     }
-            ///kill @e[type=armor_stand,y=1,z=1,x=1]
 }

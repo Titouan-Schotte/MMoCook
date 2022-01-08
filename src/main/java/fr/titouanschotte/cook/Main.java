@@ -38,6 +38,7 @@ public class Main
         network.registerMessage(PacketLabelServer.Handler.class, PacketLabelServer.class, 4, Side.SERVER);
         ItemsMod.init();
         BlocksMod.init();
+        System.out.println("MMo COOK : INITIALIZED");
     }
 
     @EventHandler

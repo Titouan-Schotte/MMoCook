@@ -34,6 +34,7 @@ public class GuiMainMenu extends GuiScreen {
     private int guiLeft;
     private int guiTop;
     private int target;
+    private int quantity;
     public static int fishCount, viandeCount, shroomCount, carrotCount, patateCount, sugarCount, appleCount, cacaoCount, wheatCount, eggCount;
 
     public GuiMainMenu(Minecraft mc) {
@@ -56,6 +57,11 @@ public class GuiMainMenu extends GuiScreen {
         buttonList.add(new GuiTexturedButton(9, guiLeft+338,guiTop+124, 46,46, "textures/items/cookie/cookie_bad.png", "textures/items/cookie/cookie_good.png", "textures/items/cookie/cookie_locked.png",0,0));
         buttonList.add(new GuiCustomButton(10, guiLeft + 165, guiTop + 185, 100, 20, "Cuisiner !", 0, 0));
         buttonList.add(new GuiCustomButton(11, guiLeft + 396, guiTop+20, 18, 20, "X", 0, 0));
+        buttonList.add(new GuiCustomButton(12, guiLeft + 100, guiTop+185, 18, 20, "-", 0, 0));
+        buttonList.add(new GuiCustomButton(13, guiLeft + 118, guiTop+185, 18, 20, "1", 20, 0));
+        buttonList.add(new GuiCustomButton(14, guiLeft + 136, guiTop+185, 18, 20, "+", 82, 0));
+
+
         buttonList.get(10).enabled = false;
 
         if(fishCount>0){buttonList.get(0).enabled=true;
@@ -95,11 +101,19 @@ public class GuiMainMenu extends GuiScreen {
             }
             target=button.id;
             buttonList.get(10).enabled=true;
-        } else {
+        } else if (button.id == 12) {
+            // -
+            if(Integer.parseInt(buttonList.get(13).displayString) > 1){
+                buttonList.get(13).displayString = String.valueOf(Integer.parseInt(buttonList.get(13).displayString) -1);
+            }
+        } else if (button.id == 14) {
+            // +
+            buttonList.get(13).displayString = String.valueOf(Integer.parseInt(buttonList.get(13).displayString) +1);
+        } else if (button.id != 13){
             if(button.id == 10){
                 this.mc.displayGuiScreen(null);
                 this.mc.setIngameFocus();
-                Minecraft.getMinecraft().displayGuiScreen(new GuiCook(Minecraft.getMinecraft(),target));
+                Minecraft.getMinecraft().displayGuiScreen(new GuiCook(Minecraft.getMinecraft(),target, buttonList.get(13).displayString));
             } else {
                 this.mc.displayGuiScreen(null);
                 this.mc.setIngameFocus();
@@ -109,27 +123,31 @@ public class GuiMainMenu extends GuiScreen {
     @Override
     public void updateScreen()
     {
-        if(fishCount>0){buttonList.get(0).enabled=true;
-        } else { buttonList.get(0).enabled=false; }
-        if(viandeCount < 1){buttonList.get(1).enabled=false;
+        int quantity = Integer.parseInt(buttonList.get(13).displayString);
+        if(fishCount < 1*quantity){buttonList.get(0).enabled=false;
+        } else { buttonList.get(0).enabled=true; }
+        if(viandeCount < 1*quantity){buttonList.get(1).enabled=false;
         }else { buttonList.get(1).enabled=true; }
-        if(eggCount<2){buttonList.get(2).enabled=false;
+        if(eggCount<2*quantity){buttonList.get(2).enabled=false;
         }else { buttonList.get(2).enabled=true; }
-        if(patateCount<2 || carrotCount<1){buttonList.get(3).enabled=false;
+        if(patateCount<2*quantity || carrotCount<1*quantity){buttonList.get(3).enabled=false;
         }else { buttonList.get(3).enabled=true; }
-        if(sugarCount<2 || appleCount<1){buttonList.get(4).enabled=false;
+        if(sugarCount<2*quantity || appleCount<1*quantity){buttonList.get(4).enabled=false;
         }else { buttonList.get(4).enabled=true; }
-        if(viandeCount<2 || carrotCount<1){buttonList.get(5).enabled=false;
+        if(viandeCount<2*quantity || carrotCount<1*quantity){buttonList.get(5).enabled=false;
         }else { buttonList.get(5).enabled=true; }
-        if(shroomCount<3 || viandeCount<1){buttonList.get(6).enabled=false;
+        if(shroomCount<3*quantity|| viandeCount<1*quantity){buttonList.get(6).enabled=false;
         }else { buttonList.get(6).enabled=true; }
-        if(fishCount<2 || patateCount<2){buttonList.get(7).enabled=false;
+        if(fishCount<2*quantity || patateCount<2*quantity){buttonList.get(7).enabled=false;
         }else { buttonList.get(7).enabled=true; }
-        if(sugarCount<2 || wheatCount<2 ||eggCount<2){buttonList.get(8).enabled=false;
+        if(sugarCount<2*quantity || wheatCount<2*quantity ||eggCount<2*quantity){buttonList.get(8).enabled=false;
         }else { buttonList.get(8).enabled=true; }
-        if(sugarCount<3 || wheatCount<1 || eggCount<2 || cacaoCount<3){buttonList.get(9).enabled=false;
+        if(sugarCount<3*quantity || wheatCount<1*quantity || eggCount<2*quantity || cacaoCount<3*quantity){buttonList.get(9).enabled=false;
         }else { buttonList.get(9).enabled=true; }
+
+        System.out.println(viandeCount*quantity<1);
         super.updateScreen();
+
     }
     public void buttonHoveringText(GuiButton button, int mouseX, int mouseY, String[] text, int posX, int posY) {
         if (button.visible && mouseX >= button.x && mouseY >= button.y && mouseX < button.x + button.width && mouseY < button.y + button.height) {
@@ -141,10 +159,11 @@ public class GuiMainMenu extends GuiScreen {
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         drawBackgroundImage();
         super.drawScreen(mouseX, mouseY, partialTicks);
+        drawCenteredString(fontRenderer, "Quantitée :", guiLeft + 65, guiTop + 191, Color.GRAY.getRGB());
         buttonHoveringText(buttonList.get(0), mouseX, mouseY, new String[]{"§4§n§lPoisson Cuit§r", "- 1 poisson cru"}, mouseX, mouseY);
         buttonHoveringText(buttonList.get(1), mouseX, mouseY, new String[]{"§4§n§lSteak Saignant§r", "- 1 viande cru"}, mouseX, mouseY);
         buttonHoveringText(buttonList.get(2), mouseX, mouseY, new String[]{"§4§n§lOmelette Baveuse§r", "- 2 oeufs"}, mouseX, mouseY);
-        buttonHoveringText(buttonList.get(3), mouseX, mouseY, new String[]{"§4§n§lSoupe de Légumes§r", "- 2 patates", "- 1 carotte"}, mouseX, mouseY);
+        buttonHoveringText(buttonList.get(3), mouseX, mouseY, new String[]{"§4§n§lSoupe de Légumes§r", "- 10 patates", "- 1 carotte"}, mouseX, mouseY);
         buttonHoveringText(buttonList.get(4), mouseX, mouseY, new String[]{"§4§n§lConfiture de Pomme§r", "- 2 sucres", "- 1 pomme","","§o§3Effet(s) Secondaire(s)§r §o: Vitesse augmentée"}, mouseX, mouseY);
         buttonHoveringText(buttonList.get(5), mouseX, mouseY, new String[]{"§4§n§lBrochette du Combattant§r", "- 2 viandes", "- 1 carotte","","§o§3Effet(s) Secondaire(s)§r §o: Force augmentée"}, mouseX, mouseY);
         buttonHoveringText(buttonList.get(6), mouseX, mouseY, new String[]{"§4§n§lBrochette aux Champignons§r", "- 3 champignons", "- 1 viande","","§o§3Effet(s) Secondaire(s)§r §o: Saut amélioré"}, mouseX, mouseY);

@@ -32,12 +32,14 @@ public class GuiCook extends GuiScreen {
     private final int met;
     private int guiLeft;
     private int guiTop;
+    private int quantity;
     private boolean go;
     private int speed = (int)(Math.random()*(10-16+1)+10);
     private int[] goodInterval=new int[2];
     private String metName;
-    public GuiCook(Minecraft mc, int met) {
+    public GuiCook(Minecraft mc, int met, String quantity) {
         this.minecraft = mc;this.met = met;
+        this.quantity = Integer.parseInt(quantity);
         switch(this.met){
             case 0: metName="truite";break;
             case 1: metName="steak";break;
@@ -84,7 +86,7 @@ public class GuiCook extends GuiScreen {
             }
             else {
                 Minecraft.getMinecraft().player.sendMessage(new TextComponentString("§4Trop cuit !"));
-                Main.network.sendToServer(new PacketGiveServer(this.met,0));
+                Main.network.sendToServer(new PacketGiveServer(this.met,0, quantity));
                 this.mc.displayGuiScreen(null);
                 this.mc.setIngameFocus();
             }
@@ -96,7 +98,7 @@ public class GuiCook extends GuiScreen {
     public void actionPerformed(GuiButton button) {
         if(button.id == 0){
             if((goodInterval[0]+guiLeft)<=buttonList.get(2).x && buttonList.get(2).x<=(goodInterval[1]+guiLeft)){
-                Main.network.sendToServer(new PacketGiveServer(this.met,1));
+                Main.network.sendToServer(new PacketGiveServer(this.met,1, quantity));
                 Minecraft.getMinecraft().player.sendMessage(new TextComponentString("§6Cuisson PARFAITE"));
             } else {
                 if((goodInterval[0]+guiLeft)>=buttonList.get(2).x){
@@ -104,7 +106,7 @@ public class GuiCook extends GuiScreen {
                 } else {
                     Minecraft.getMinecraft().player.sendMessage(new TextComponentString("§4Trop cuit !"));
                 }
-                Main.network.sendToServer(new PacketGiveServer(this.met,0));
+                Main.network.sendToServer(new PacketGiveServer(this.met,0, quantity));
             }
             this.mc.displayGuiScreen(null);
             this.mc.setIngameFocus();
