@@ -19,7 +19,7 @@ Vous pouvez remarquer qu'en mettant votre souris par dessus la nourriture voulue
 
 Une fois tous les ingrédients récupérés vous pourrez alors séléctionner la nourriture souhaitée pour la cuisiner :
 
-![image](https://user-images.githubusercontent.com/73279480/147995658-3e8a5b8d-ed6a-431f-85c5-16349426f280.png)
+![image](https://user-images.githubusercontent.com/73279480/148655878-91ffe7c9-19fd-48e5-b32d-e6400568af66.png)
 
 Démarrera alors un mini-jeu de rapidité :
 Vous devrez appuyer sur le bouton STOP lorsque le curseur animé atteindra la zone orangé/rouge (selon la difficulté de conception de la nourriture la couleur et la taille de la zone variera).
